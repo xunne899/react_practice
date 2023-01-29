@@ -15,9 +15,11 @@ const TodoTable = (props) => {
                     {
                         props.todos.map(todos=>(
                             <TodoRowItem
+                               key={todos.rowNumber}
                                rowNumber={todos.rowNumber}
                                rowDescription={todos.rowDescription}
                                rowAssigned={todos.rowAssigned}
+                               deleteTodo={props.deleteTodo}
                                />
                         ))
                     }
